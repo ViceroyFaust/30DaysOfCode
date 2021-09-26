@@ -1,0 +1,2 @@
+# 30 Days of Code
+This is my repository for Hackerrank's 30 Days of Code challenge. I undertook this challenge because my uncle recommended I take it in order to see how I can approach my problem solving. I started on 2021-09-23.
