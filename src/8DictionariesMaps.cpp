@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -18,7 +19,7 @@ std::vector<std::string> string_split(std::string input) {
     return tokens;
 }
 
-int main() {
+void phonebook_method() {
     int numOfEntries;
     std::string input = "";
     std::vector<std::string> tokens;
@@ -45,5 +46,25 @@ int main() {
         else
             std::cout << "Not found" << std::endl;
     }
+}
+
+int main() {
+    std::string data1 = "2\nabs 888888888\nbbb 9876969879\nabs\nlol\n";
+    for (int i = 0; i < 10; ++i) {
+        data1 += "abc" + i;
+        data1 += "\n";
+    }
+    std::string data2 = "2\nabs 888888888\nbbb 9876969879\nabs\nlol\n";
+    std::stringstream ss;
+    
+    
+    ss << data1;
+    std::cin.rdbuf(ss.rdbuf());
+
+    phonebook_method();
+    ss << data2;
+    std::cin.rdbuf(ss.rdbuf());
+    phonebook_method();
+
     return 0;
 }
